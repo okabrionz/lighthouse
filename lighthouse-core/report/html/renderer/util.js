@@ -665,8 +665,10 @@ Util.UIStrings = {
   /** Title of the lab data section of the Performance category. Within this section are various speed metrics which quantify the pageload performance into values presented in seconds and milliseconds. "Lab" is an abbreviated form of "laboratory", and refers to the fact that the data is from a controlled test of a website, not measurements from real users visiting that site.  */
   labDataTitle: 'Lab Data',
 
-  /** This label is for a checkbox above a table of items loaded by a web page. The checkbox is used to show or hide third-party (or "3rd-party") resources in the table, where "third-party resources" refers to items loaded by a web page from URLs that aren't controlled by the owner of the web page. */
-  thirdPartyResourcesLabel: 'Show 3rd-party resources',
+  /** This label is for a checkbox above a table of items loaded by a web page. This option is used to show all resources in the table. The term `resources` may be elided, as long as it is used in the "exclude" label. */
+  thirdPartyResourcesShowLabel: 'Show all',
+  /** This label is for a checkbox above a table of items loaded by a web page. The option is used to hide third-party (or "3rd-party") resources in the table, where "third-party resources" refers to items loaded by a web page from URLs that aren't controlled by the owner of the web page. */
+  thirdPartyResourcesExcludeLabel: 'Exclude 3rd party',
 };
 
 if (typeof module !== 'undefined' && module.exports) {

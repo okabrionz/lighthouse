@@ -183,7 +183,7 @@ describe('ReportUIFeatures', () => {
       });
 
       it('filters out third party resources in details tables when checkbox is clicked', () => {
-        const filterCheckbox = dom.find('#uses-webp-images .lh-3p-filter-input', container);
+        const filterCheckbox = dom.find('#uses-webp-images .lh-3p-filter__input', container);
 
         function getUrlsInTable() {
           return dom
@@ -199,24 +199,24 @@ describe('ReportUIFeatures', () => {
       });
 
       it('adds no filter for audits in thirdPartyFilterAuditExclusions', () => {
-        const checkboxClassName = 'lh-3p-filter-input';
+        const checkboxClassName = 'lh-3p-filter__input';
 
         const yesCheckbox = dom.find(`#uses-webp-images .${checkboxClassName}`, container);
         expect(yesCheckbox).toBeTruthy();
 
         expect(() => dom.find(`#uses-rel-preconnect .${checkboxClassName}`, container))
-          .toThrowError('query #uses-rel-preconnect .lh-3p-filter-input not found');
+          .toThrowError('query #uses-rel-preconnect .lh-3p-filter__input not found');
       });
 
       it('filter is disabled and checked for when just third party resources', () => {
         const filterCheckbox =
-          dom.find('#render-blocking-resources .lh-3p-filter-input', container);
+          dom.find('#render-blocking-resources .lh-3p-filter__input', container);
         expect(filterCheckbox.disabled).toEqual(true);
         expect(filterCheckbox.checked).toEqual(true);
       });
 
       it('filter is disabled and not checked for just first party resources', () => {
-        const filterCheckbox = dom.find('#uses-text-compression .lh-3p-filter-input', container);
+        const filterCheckbox = dom.find('#uses-text-compression .lh-3p-filter__input', container);
         expect(filterCheckbox.disabled).toEqual(true);
         expect(filterCheckbox.checked).toEqual(false);
       });

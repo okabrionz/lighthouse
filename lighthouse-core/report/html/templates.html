@@ -783,24 +783,64 @@ limitations under the License.
 
 <template id="tmpl-lh-3p-filter">
   <style>
+    /* The input checkbox element is invisible by should span the same width and height
+       as the label. Flex ensures the input is the correct width, while the transform
+       ensures that the input is in the correct position. */
     .lh-3p-filter {
-      background-color: var(--table-higlight-background-color);
       color: var(--color-gray-600);
       float: right;
       padding: 6px;
+      display: inline-flex;
+      flex-direction: column;
+      margin-bottom: -27px;
     }
-    .lh-3p-filter-label, .lh-3p-filter-input {
-      vertical-align: middle;
-      user-select: none;
+    .lh-3p-filter__label {
+      transform: translateY(-28px);
     }
-    .lh-3p-filter-input:disabled + .lh-3p-ui-string {
+    .lh-3p-filter__input {
+      cursor: pointer;
+      opacity: 0;
+      height: 28px;
+      width: 100%;
+      height: 28px;
+      z-index: 1;
+    }
+    .lh-3p-filter__input:focus + label {
+      outline: -webkit-focus-ring-color auto 3px;
+    }
+
+    .lh-3p-filter__show, .lh-3p-filter__exclude {
+      background-color: var(--report-border-color-secondary);
+      padding: 5px;
+      font-weight: 500;
+      /* Close the gap between the inline spans. */
+      float: left;
+    }
+    .lh-3p-filter__show {
+      border-radius: 18px 0 0 18px;
+    }
+    .lh-3p-filter__exclude {
+      border-radius: 0 18px 18px 0;
+      color: var(--color-gray-600);
+    }
+    .lh-3p-filter__input:not(:checked) + label .lh-3p-filter__exclude,
+    .lh-3p-filter__input:checked + label .lh-3p-filter__show {
+      background-color: var(--color-blue-A700);
+      color: var(--color-white);
+    }
+    .lh-3p-filter__input:disabled + label .lh-3p-filter__exclude {
       text-decoration: line-through;
     }
   </style>
   <div class="lh-3p-filter">
-    <label class="lh-3p-filter-label">
-      <input type="checkbox" class="lh-3p-filter-input" checked />
-      <span class="lh-3p-ui-string">Show 3rd party resources</span> (<span class="lh-3p-filter-count"></span>)
+    <input type="checkbox" class="lh-3p-filter__input" checked />
+    <label class="lh-3p-filter__label" aria-label="Toggle the display of third-party resources">
+      <span class="lh-3p-filter__show">
+        <span class="lh-ui-string">Show all</span>
+      </span>
+      <span class="lh-3p-filter__exclude">
+        <span class="lh-ui-string">Exclude 3rd party</span> (<span class="lh-3p-filter__count"></span>)
+      </span>
     </label>
   </div>
 </template>

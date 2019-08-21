@@ -249,15 +249,17 @@ class ReportUIFeatures {
       });
 
       this._dom.find('label', filterTemplate).setAttribute('for', id);
-      this._dom.find('.lh-3p-filter-count', filterTemplate).textContent =
+      this._dom.find('.lh-3p-filter__count', filterTemplate).textContent =
           `${thirdPartyRows.size}`;
-      this._dom.find('.lh-3p-ui-string', filterTemplate).textContent =
-          Util.UIStrings.thirdPartyResourcesLabel;
+      this._dom.find('.lh-3p-filter__show .lh-ui-string', filterTemplate).textContent =
+          Util.UIStrings.thirdPartyResourcesShowLabel;
+      this._dom.find('.lh-3p-filter__exclude .lh-ui-string', filterTemplate).textContent =
+          Util.UIStrings.thirdPartyResourcesExcludeLabel;
 
       // If all or none of the rows are 3rd party, disable the checkbox.
       if (thirdPartyRows.size === urlItems.length || !thirdPartyRows.size) {
         filterInput.disabled = true;
-        filterInput.checked = thirdPartyRows.size === urlItems.length;
+        filterInput.checked = thirdPartyRows.size !== urlItems.length;
       }
 
       // Finally, add checkbox to the DOM.
