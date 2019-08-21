@@ -257,10 +257,10 @@ class ReportUIFeatures {
           Util.UIStrings.thirdPartyResourcesExcludeLabel;
 
       // If all or none of the rows are 3rd party, disable the checkbox.
-      if (thirdPartyRows.size === urlItems.length || !thirdPartyRows.size) {
-        filterInput.disabled = true;
-        filterInput.checked = thirdPartyRows.size !== urlItems.length;
-      }
+      // if (thirdPartyRows.size === urlItems.length || !thirdPartyRows.size) {
+      //   filterInput.disabled = true;
+      //   filterInput.checked = thirdPartyRows.size !== urlItems.length;
+      // }
 
       // Finally, add checkbox to the DOM.
       if (!tableEl.parentNode) return; // Keep tsc happy.

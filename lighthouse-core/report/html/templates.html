@@ -783,27 +783,24 @@ limitations under the License.
 
 <template id="tmpl-lh-3p-filter">
   <style>
-    /* The input checkbox element is invisible but should span the same width and height
-       as the label. Flex ensures the input is the correct width, while the transform
-       ensures that the input is in the correct position. */
+    /* The input checkbox element is invisible but should span the same width and height as the label. */
     .lh-3p-filter {
       color: var(--color-gray-600);
       float: right;
       padding: 6px;
-      display: inline-flex;
-      flex-direction: column;
-      margin-bottom: -27px;
-    }
-    .lh-3p-filter__label {
-      transform: translateY(-28px);
+      position: relative;
     }
     .lh-3p-filter__input {
       cursor: pointer;
       opacity: 0;
-      height: 28px;
       width: 100%;
-      height: 28px;
+      height: 100%;
       z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
     .lh-3p-filter__input:focus + label {
       outline: -webkit-focus-ring-color auto 3px;
