@@ -215,10 +215,10 @@ describe('ReportUIFeatures', () => {
         expect(filterCheckbox.checked).toEqual(true);
       });
 
-      it('filter is disabled and not checked for just first party resources', () => {
+      it('filter is disabled and checked for just first party resources', () => {
         const filterCheckbox = dom.find('#uses-text-compression .lh-3p-filter__input', container);
         expect(filterCheckbox.disabled).toEqual(true);
-        expect(filterCheckbox.checked).toEqual(false);
+        expect(filterCheckbox.checked).toEqual(true);
       });
     });
   });
