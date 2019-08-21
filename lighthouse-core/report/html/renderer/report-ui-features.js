@@ -259,6 +259,7 @@ class ReportUIFeatures {
       // If all or none of the rows are 3rd party, disable the checkbox.
       if (thirdPartyRows.size === urlItems.length || !thirdPartyRows.size) {
         filterInput.disabled = true;
+        // This is just for styling.
         filterInput.checked = thirdPartyRows.size !== urlItems.length;
       }
 
