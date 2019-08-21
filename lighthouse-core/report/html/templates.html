@@ -812,6 +812,8 @@ limitations under the License.
       background-color: var(--report-border-color-secondary);
       padding: 0 8px 0 8px;
       font-weight: 500;
+      font-size: 13px;
+      color: var(--color-gray-800);
       /* Close the gap between the inline spans. */
       float: left;
     }
@@ -820,7 +822,6 @@ limitations under the License.
     }
     .lh-3p-filter__exclude {
       border-radius: 0 18px 18px 0;
-      color: var(--color-gray-600);
     }
     .lh-3p-filter__input:not(:checked) + label .lh-3p-filter__exclude,
     .lh-3p-filter__input:checked + label .lh-3p-filter__show {
@@ -828,7 +829,7 @@ limitations under the License.
       color: var(--color-white);
     }
     .lh-3p-filter__input:disabled + label .lh-3p-filter__exclude {
-      text-decoration: line-through;
+      color: var(--color-gray-400);
     }
   </style>
   <div class="lh-3p-filter">
