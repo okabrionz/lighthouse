@@ -260,7 +260,7 @@ class ReportUIFeatures {
       if (thirdPartyRows.size === urlItems.length || !thirdPartyRows.size) {
         filterInput.disabled = true;
         // This is just for styling.
-        filterInput.checked = thirdPartyRows.size !== urlItems.length;
+        filterInput.checked = true;
       }
 
       // Finally, add checkbox to the DOM.
