@@ -1481,8 +1481,11 @@
   "lighthouse-core/report/html/renderer/util.js | snippetExpandButtonLabel": {
     "message": "Expand snippet"
   },
-  "lighthouse-core/report/html/renderer/util.js | thirdPartyResourcesLabel": {
-    "message": "Show 3rd-party resources"
+  "lighthouse-core/report/html/renderer/util.js | thirdPartyResourcesExcludeLabel": {
+    "message": "Exclude 3rd party"
+  },
+  "lighthouse-core/report/html/renderer/util.js | thirdPartyResourcesShowLabel": {
+    "message": "Show all"
   },
   "lighthouse-core/report/html/renderer/util.js | toplevelWarningsMessage": {
     "message": "There were issues affecting this run of Lighthouse:"
