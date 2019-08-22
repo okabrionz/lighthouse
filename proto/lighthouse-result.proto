@@ -357,8 +357,11 @@ message I18n {
     // The label for the button to show only a few lines of a snippet
     string snippet_collapse_button_label = 19;
 
-    // This label is for a filter checkbox above a table of items
-    string third_party_resources_label = 20;
+    // This label is for a filter checkbox above a table of items - show all
+    string third_party_resources_show_label = 20;
+
+    // This label is for a filter checkbox above a table of items - exclude 3p
+    string third_party_resources_exclude_label = 21;
   }
 
   // The message holding all formatted strings
